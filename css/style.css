@@ -108,11 +108,23 @@ li {
 }
 .menu__item {}
 .menu__link {
+ position: relative;
 	color: rgba(18, 18, 18, 0.4);
 	font-weight: 500;
 }
-.menu__link:hover {
-	text-decoration: underline;
+.menu__link:hover::after {
+	width: 100%;
+}
+.menu__link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #f85a47;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 @media (max-width: 1092px) {
 	.header__container {
@@ -330,10 +342,25 @@ li {
 	font-weight: 600;
 }
 .body-store__all {
+ position: relative;
 	color: #868686;
 	font-size: 20px;
 	line-height: 1.5;
 	font-weight: 500;
+}
+.body-store__all:hover::after {
+	width: 100%;
+}
+.body-store__all::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #f85a47;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .body-store__items {
 	display: grid;
@@ -347,9 +374,14 @@ li {
 }
 .item__image {
 	text-align: center;
+ overflow: hidden;
 }
 .item__image img{
 	max-width: 100%;
+ transition: all 0.3s ease 0s;
+}
+.item__image img:hover {
+ transform: scale(1.1);
 }
 .item__image:not(:last-child){
 	margin-bottom: 40px;
@@ -888,13 +920,25 @@ li {
 	margin-bottom: 20px;
 }
 .contacts-footer__link {
+ position: relative;
 	color: #666;
 	display: inline-block;
 	line-height: 24px;
 	padding-left: 44px;
 }
-.contacts-footer__link:hover {
-	text-decoration: underline;
+.contacts-footer__link:hover::after {
+	width: 100%;
+}
+.contacts-footer__link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #f85a47;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .contacts-footer__link_mail {
@@ -926,10 +970,22 @@ li {
 	margin-bottom: 16px;
 }
 .menu-footer__link {
+ position: relative;
 	color: #666;
 }
-.menu-footer__link:hover{
-	text-decoration: underline;
+.menu-footer__link:hover::after {
+	width: 100%;
+}
+.menu-footer__link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #f85a47;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
 .body-footer__social {}
